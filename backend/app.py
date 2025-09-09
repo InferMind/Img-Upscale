@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})  # tighten in production
 
 
-@app.post("/api/enhance")
+@app.route("/api/enhance", methods=["POST"])
 def enhance_image():
     if "image" not in request.files or "scaleFactor" not in request.form:
         return jsonify(success=False, error="Missing image or scaleFactor"), 400
@@ -58,6 +58,6 @@ def enhance_image():
             pass
 
 
-@app.get("/health")
+@app.route("/health", methods=["GET"])
 def health():
     return {"status": "ok"}
