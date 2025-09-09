@@ -1,0 +1,17 @@
+# Core API
+Flask==3.0.3
+flask-cors==4.0.1
+gunicorn==21.2.0
+pillow==10.4.0
+numpy==2.0.1
+
+# PyTorch (CPU wheels)
+--index-url https://download.pytorch.org/whl/cu121
+torch==2.3.1
+torchvision==0.18.1
+
+# Real-ESRGAN Python stack
+opencv-python-headless==4.10.0.84
+basicsr @ git+https://github.com/XPixelGroup/BasicSR@8d56e3a045f9fb3e1d8872f92ee4a4f07f886b0a
+facexlib==0.3.0
+realesrgan==0.3.0
